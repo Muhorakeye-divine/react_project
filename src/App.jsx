@@ -8,6 +8,7 @@ import {
 import ProductList from './components/ListProduct/PorductList';
 import Checkout from './pages/UserBuy/UserBuy';
 import PersonForm from './pages/FormrSave/FormSave';
+import PersonManager from './pages/PersonManager/PersonManager';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <div className="app">
 
         <h1>Bienvenue sur D_Soko</h1>
-        <Link to="/person-form">
-          <button>Enregistrer un client</button>
+        <Link to="/person-manager">
+          <button className='btn btn-secondary'>Enregistrer un client</button>
         </Link>
 
         <Routes>
@@ -29,10 +30,9 @@ function App() {
             path="/checkout/:id"
             element={<Checkout />}
           />
-
           <Route
-            path="/person-form"
-            element={<PersonForm />}
+            path="/person-manager"
+            element={<PersonManager />}
           />
 
         </Routes>
